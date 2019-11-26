@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Snake and Ladder Game</title>
+  </head>
+
+  <body>
+    <h1>SNAKE AND LADDER GAME</h1><br>
+    <h3>Choose 2 person to play along</h3>
+    <button class="button" type="button" name="dice">Roll the dice</button>
+    <div class="game"></div>
+  </body>
+
+  <script>
+  var button = document.querySelector('.button');
+  var game = document.querySelector('.game');
+  var playerNo = 2;
+  var position = [0, 0];
+  var dice;
+  var resetGame = 1;
+  button.addEventListener('click', function(){roll()});
+
+  function roll(){
+
+    if (resetGame == 0) {
+
+      game.innerHTML = " ";
+      resetGame = 1;
+      playerNo = 2;
+    }
+
+    if (playerNo == 1) {
+      playerNo = 2;
+      dice = Math.floor(Math.random() * 6) + 1
+      position[playerNo-1] += dice;
+      game.innerHTML += "Player 2 rolled " + dice + "<br/>";
+
+      if (position[playerNo-1] >= 25) {
+        game.innerHTML += "Player 2 win !!!" + "<br/>";
+        position[0] = 0;
+        position[1] = 0;
+        resetGame = 0;
+      }
+
+      else {
+        game.innerHTML += "Player 2 moved to cells " + position[playerNo-1] + "<br/>";
+      }
+    }
+
+    else if (playerNo == 2) {
+      playerNo = 1;
+      dice = Math.floor(Math.random() * 6) + 1
+      position[playerNo-1] += dice;
+      game.innerHTML += "Player 1 rolled " + dice + "<br/>";
+
+      if (position[playerNo-1] >= 25) {
+        game.innerHTML += "Player 1 win !!! " + "<br/>";
+        position[0] = 0;
+        position[1] = 0;
+        resetGame = 0;
+      }
+
+      else {
+        game.innerHTML += "Player 1 moved to cells " + position[playerNo-1] + "<br/>";
+      }
+    }
+
+    else;
+
+    if (position[playerNo-1] == 15) {
+      position[playerNo-1] = 5;
+      game.innerHTML += "Auch ! Player " + playerNo + " stepped on a snake! Go down to cells 5." + "<br/>";
+    }
+
+    else if (position[playerNo-1] == 23) {
+      position[playerNo-1] = 16;
+      game.innerHTML += "Auch ! Player " + playerNo + " stepped on a snake! Go down to cells 16." + "<br/>";
+    }
+
+    else if (position[playerNo-1] == 8) {
+      position[playerNo-1] = 15;
+      game.innerHTML += "Yeay ! Player " + playerNo + " stepped on a ladder! Go up to cells 15." + "<br/>";
+    }
+
+    else if (position[playerNo-1] == 19) {
+      position[playerNo-1] = 24;
+      game.innerHTML += "Yeay ! Player " + playerNo + " stepped on a ladder! Go up to cells 24." + "<br/>";
+    }
+
+    else;
+  }
+  </script>
+</html>
