@@ -1,0 +1,68 @@
+body {
+  width : 90%;
+  margin: auto;
+  font-family: Arial;
+}
+
+#Left img{
+  width: 350px;
+  height: 250px;
+  margin-left: 12%;
+}
+
+#Left h1{
+  text-align: center;
+  font-size: 35px;
+}
+
+#Left h2{
+  font-size: 25px;
+  padding-left: 30%;
+  padding-top: 0;
+}
+
+#Left h3{
+  padding-left: 30%;
+}
+
+#Left p{
+  padding-left: 30%;
+}
+
+#Right img{
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+}
+
+div:nth-of-type(1) {
+  width : 48%;
+  float : left;
+}
+
+div:nth-of-type(2) {
+  width : 48%;
+  padding-top: 50px;
+  float : right;
+}
+
+.slide{
+  padding-left: 15%;
+}
+.btn {
+  background-color: dodgerblue;
+  color: white;
+  font-size: 16px;
+  padding: 16px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+  left: 25%;
+}
+
+.btn:hover {
+  background-color: grey;
+  color: black;

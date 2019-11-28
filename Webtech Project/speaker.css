@@ -1,0 +1,57 @@
+body{
+background:;
+}
+h1{
+  text-align: center;
+  color: white;
+  font-size: 40px;
+}
+ h2{
+  text-align: center;
+  text-decoration: underline;
+}
+.bg{
+  background-image: url(image/mic.jpg);
+  background-size: cover;
+  width: 70%;
+  padding: 80px;
+  margin: 100px;
+  margin-bottom: 0px;
+background-position: center;
+}
+ .clearfix{
+  background: white;
+  width: 70%;
+  padding: 80px;
+  margin-top: 0px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 100px;
+
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+p{
+  font-size: 20px;
+  line-height: 30px;
+  font-family: sans-serif;
+  text-indent: 40px;
+}
+.image {
+  margin-right: 10px;
+  width: 150px;
+  float: left;
+}
+.img2{
+  margin-left: 10px;
+  width: 200px;
+  float: right;
+}
+.img3{
+  margin-right: 10px;
+  width: 150;
+  float: left;
+}
